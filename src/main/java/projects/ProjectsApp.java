@@ -8,6 +8,7 @@ public class ProjectsApp {
 
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("unused")
 		Connection conn = DbConnection.getConnection(); 
 
 	}

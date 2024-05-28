@@ -23,7 +23,7 @@ public class DbConnection {
 			System.out.println("Connection successfully obtained");
 			return conn;
 		} catch (SQLException e) {
-			System.out.println("Error Connecting to "+url);
+			System.out.println("Error Connecting to " + url);
 			throw new DbException(e);
 		}		
 	}	
