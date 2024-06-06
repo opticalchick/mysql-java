@@ -18,10 +18,14 @@ public class ProjectsApp {
 		"1) Add a project");
 	//@formatter:on
 	
+	
+	//entry point for app
 	public static void main(String[] args) {
 	new ProjectsApp().processUserSelections();
 	
 	}
+	
+	//displays menu options, takes in user input and processes the request.
 	private void processUserSelections() {
 		boolean done = false;
 		
@@ -46,12 +50,14 @@ public class ProjectsApp {
 			}
 		}
 	}
+	
+	//takes in user input to add row to project table and calls project service to send info update DB
 	private void createProject() {
-		String projectName = getStringInput("Enter the project name");
-		BigDecimal estimatedHours = getDecimalInput("Enter the estimated hours");
-		BigDecimal actualHours = getDecimalInput("Enter the actual hours");
-		Integer difficulty = getIntInput("Enter the project difficulty (1-5)");
-		String notes = getStringInput("Enter the project notes");
+		String projectName = getStringInput("Enter the project name:");
+		BigDecimal estimatedHours = getDecimalInput("Enter the estimated hours:");
+		BigDecimal actualHours = getDecimalInput("Enter the actual hours:");
+		Integer difficulty = getIntInput("Enter the project difficulty (1-5):");
+		String notes = getStringInput("Enter the project notes:");
 		
 		Project project = new Project();
 		
@@ -65,7 +71,7 @@ public class ProjectsApp {
 		System.out.println("You have successfully created a project: " + dbProject);		
 	}
 	
-
+	//converts user input from String to BigDecimal & throws error if applicable
 	private BigDecimal getDecimalInput(String prompt) {
 		String input = getStringInput(prompt);
 		

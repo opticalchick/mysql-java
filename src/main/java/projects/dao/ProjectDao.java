@@ -17,7 +17,7 @@ import projects.entity.Step;
 import projects.entity.provided.util.DaoBase;
 import projects.exception.DbException;
 
-
+@SuppressWarnings("unused")
 public class ProjectDao extends provided.util.DaoBase {
 	private static final String CATEGORY_TABLE = "category";
 	private static final String MATERIAL_TABLE = "material";
@@ -27,11 +27,12 @@ public class ProjectDao extends provided.util.DaoBase {
 	
 	
 	public Project insertProject(Project project) {
-		
+		//sql statement to add new row into PROJECT_TABLE DB
 		//@formatter:off
 		String sql = ""
-		+ "INSERT INTO " + PROJECT_TABLE + " "
-		+"(project_name, estimated_hours, actual_hours, difficulty, notes)"
+		+ "INSERT INTO " 
+		+ PROJECT_TABLE
+		+" (project_name, estimated_hours, actual_hours, difficulty, notes)"
 		+"VALUES "
 		+"(?, ?, ?, ?, ?)";
 		//@formatter:on
