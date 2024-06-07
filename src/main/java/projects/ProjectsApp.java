@@ -85,12 +85,13 @@ public class ProjectsApp {
 			throw new DbException(input + " is not a valid decimal number.");
 		}
 	}
-	
+	//exits menu and terminates app
 	private boolean exitMenu() {
 		System.out.println("Exiting the menu.");
 		return true;
 	}
 	
+	//gives a menu and prompt to choose from menu
 	private int getUserSelection() {
 		printOperations();
 		
@@ -98,7 +99,7 @@ public class ProjectsApp {
 		
 		return Objects.isNull(input) ? -1 : input;
 	}
-	
+	//converts user input from String to Int
 	private Integer getIntInput(String prompt) {
 		String input = getStringInput(prompt);
 		
@@ -119,7 +120,8 @@ public class ProjectsApp {
 		
 		return input.isBlank() ? null : input.trim();
 	}
-		
+	
+	//prints operations	
 	private void printOperations() {
 		System.out.println("\nThese are the available selections.  Press the Enter key to quit:");
 		
