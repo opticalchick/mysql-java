@@ -20,7 +20,7 @@ public class DbConnection {
 		
 		try {
 			Connection conn = DriverManager.getConnection(url);
-			System.out.println("Connection successfully obtained");
+			System.out.println("Connection to schema 'projects' is successful.");
 			return conn;
 		} catch (SQLException e) {
 			System.out.println("Error Connecting to " + url);
